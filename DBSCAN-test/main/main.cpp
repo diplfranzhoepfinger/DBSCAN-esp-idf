@@ -29,19 +29,18 @@ void readBenchmarkData(vector<Point>& points)
 
 }
 
-void printResults(vector<Point>& points, int num_points)
+void printResults(vector<Point>& points)
 {
-    int i = 0;
     printf("Number of points: %u\n"
         " x   cluster_id\n"
         "-----------------------------\n"
-        , num_points);
-    while (i < num_points)
+        , points.size());
+    for ( const Point  &element : points )
     {
           printf("%5.2lf : %d\n",
-                 points[i].x,
-                 points[i].clusterID);
-          ++i;
+        		  element.x,
+				  element.clusterID);
+
     }
 }
 
@@ -60,8 +59,13 @@ extern "C" void app_main(void)
     // main loop
     ds.run();
 
+    vector<vector<Point>> vvp = ds.getClusters();
+
+
+
+
     // result of DBSCAN algorithm
-    printResults(ds.m_points, ds.getTotalPointSize());    
+    printResults(ds.m_points);
 
 
 
