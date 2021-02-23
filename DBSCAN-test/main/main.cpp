@@ -61,7 +61,14 @@ extern "C" void app_main(void)
 
     vector<vector<Point>> vvp = ds.getClusters();
 
-
+    for ( const vector<Point>  &vp : vvp )
+    {
+    	cout << "----------------------------------------------" << endl;
+        for ( const Point  &p : vp )
+        {
+            cout << "x:" << p.x << "cluster" << p.clusterID << endl;
+        }
+    }
 
 
     // result of DBSCAN algorithm
