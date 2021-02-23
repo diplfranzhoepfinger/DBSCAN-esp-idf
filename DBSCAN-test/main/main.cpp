@@ -6,7 +6,7 @@ using std::cout;
 using std::endl;
 
 #define MINIMUM_POINTS 4     // minimum number of cluster
-#define EPSILON (0.75*0.75)  // distance for clustering, metre^2
+#define EPSILON (0.75)  // distance for clustering
 
 void readBenchmarkData(vector<Point>& points)
 {
@@ -33,7 +33,7 @@ void printResults(vector<Point>& points, int num_points)
 {
     int i = 0;
     printf("Number of points: %u\n"
-        " x     y     z     cluster_id\n"
+        " x   cluster_id\n"
         "-----------------------------\n"
         , num_points);
     while (i < num_points)
