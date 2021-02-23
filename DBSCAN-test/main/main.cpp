@@ -15,10 +15,17 @@ void readBenchmarkData(vector<Point>& points)
 
     Point p;
 
-    p.x = 5;    p.clusterID = UNCLASSIFIED;    points.push_back(p);
-    p.x = 5;    p.clusterID = UNCLASSIFIED;    points.push_back(p);
-    p.x = 5;    p.clusterID = UNCLASSIFIED;    points.push_back(p);
-    p.x = 5;    p.clusterID = UNCLASSIFIED;    points.push_back(p);
+    p.x = 5.1;    p.clusterID = UNCLASSIFIED;    points.push_back(p);
+    p.x = 5.2;    p.clusterID = UNCLASSIFIED;    points.push_back(p);
+    p.x = 4.8;    p.clusterID = UNCLASSIFIED;    points.push_back(p);
+    p.x = 4.9;    p.clusterID = UNCLASSIFIED;    points.push_back(p);
+
+
+
+    p.x = 3.1;    p.clusterID = UNCLASSIFIED;    points.push_back(p);
+    p.x = 3.2;    p.clusterID = UNCLASSIFIED;    points.push_back(p);
+    p.x = 2.8;    p.clusterID = UNCLASSIFIED;    points.push_back(p);
+    p.x = 2.9;    p.clusterID = UNCLASSIFIED;    points.push_back(p);
 
 }
 
