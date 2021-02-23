@@ -68,6 +68,10 @@ extern "C" void app_main(void)
         {
             cout << "x:" << p.x << "cluster" << p.clusterID << endl;
         }
+        cout << "calculate the Center" << endl;
+        Point pc = ds.getCenter(vp);
+        cout << "Center x:" << pc.x << "cluster" << pc.clusterID << endl;
+    	cout << "----------------------------------------------" << endl;
     }
 
 
