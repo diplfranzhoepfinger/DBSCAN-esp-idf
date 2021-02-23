@@ -15,10 +15,10 @@ void readBenchmarkData(vector<Point>& points)
 
     Point p;
 
-    p.x = 5;     p.y = 5;    p.z = 5;    p.clusterID = UNCLASSIFIED;    points.push_back(p);
-    p.x = 5;     p.y = 5;    p.z = 5;    p.clusterID = UNCLASSIFIED;    points.push_back(p);
-    p.x = 5;     p.y = 5;    p.z = 5;    p.clusterID = UNCLASSIFIED;    points.push_back(p);
-    p.x = 5;     p.y = 5;    p.z = 5;    p.clusterID = UNCLASSIFIED;    points.push_back(p);
+    p.x = 5;    p.clusterID = UNCLASSIFIED;    points.push_back(p);
+    p.x = 5;    p.clusterID = UNCLASSIFIED;    points.push_back(p);
+    p.x = 5;    p.clusterID = UNCLASSIFIED;    points.push_back(p);
+    p.x = 5;    p.clusterID = UNCLASSIFIED;    points.push_back(p);
 
 }
 
@@ -31,9 +31,8 @@ void printResults(vector<Point>& points, int num_points)
         , num_points);
     while (i < num_points)
     {
-          printf("%5.2lf %5.2lf %5.2lf: %d\n",
+          printf("%5.2lf : %d\n",
                  points[i].x,
-                 points[i].y, points[i].z,
                  points[i].clusterID);
           ++i;
     }
