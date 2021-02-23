@@ -10,28 +10,16 @@ using std::endl;
 
 void readBenchmarkData(vector<Point>& points)
 {
-    // load point cloud
-    FILE *stream;
-    stream = fopen ("benchmark_hepta.dat","ra");
 
-	unsigned int num_points;
-	unsigned int cluster;
-	unsigned int i = 0;
 
-    fscanf(stream, "%u\n", &num_points);
 
-    Point *p = (Point *)calloc(num_points, sizeof(Point));
+    Point p;
 
-    while (i < num_points)
-    {
-          fscanf(stream, "%f,%f,%f,%d\n", &(p[i].x), &(p[i].y), &(p[i].z), &cluster);
-          p[i].clusterID = UNCLASSIFIED;
-          points.push_back(p[i]);
-          ++i;
-    }
+    p.x = 5;     p.y = 5;    p.z = 5;    p.clusterID = UNCLASSIFIED;    points.push_back(p);
+    p.x = 5;     p.y = 5;    p.z = 5;    p.clusterID = UNCLASSIFIED;    points.push_back(p);
+    p.x = 5;     p.y = 5;    p.z = 5;    p.clusterID = UNCLASSIFIED;    points.push_back(p);
+    p.x = 5;     p.y = 5;    p.z = 5;    p.clusterID = UNCLASSIFIED;    points.push_back(p);
 
-    free(p);
-    fclose(stream);
 }
 
 void printResults(vector<Point>& points, int num_points)
